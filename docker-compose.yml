@@ -13,8 +13,8 @@ services:
       - "25432:5432"
     environment:
       POSTGRES_DB: users
-      POSTGRES_USER: anakin
-      POSTGRES_PASSWORD: anakin
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD: 
       PGDATA: /var/lib/postgresql/data/webapi-golang
     volumes:
       - webapi-golang:/var/lib/postgresql/data
