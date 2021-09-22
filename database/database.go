@@ -10,7 +10,7 @@ import (
 var db *gorm.DB
 
 func RunDB() {
-	str := "host=localhost port=5432 user=anakin dbname=users sslmode=disable password=anakin"
+	str := "host=localhost port=5432 sslmode=disable user=root password=admin"
 
 	database, err := gorm.Open(postgres.Open(str), &gorm.Config{})
 
@@ -29,6 +29,6 @@ func RunDB() {
 }
 
 
-func getDatabase() *gorm.DB {
+func GetDatabase() *gorm.DB {
 	return db
 }

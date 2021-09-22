@@ -1,4 +1,4 @@
-version: "3.9"
+version: "3.7"
 
 services:
   db:
@@ -6,15 +6,13 @@ services:
       context: .
       dockerfile: Dockerfile
     image: postgres
-    container_name: database-golang
+    container_name: some-postgres-test
     restart: unless-stopped
     tty: true
     ports:
       - "25432:5432"
     environment:
-      POSTGRES_DB: users
-      POSTGRES_USER: anakin
-      POSTGRES_PASSWORD: anakin
+      POSTGRES_PASSWORD: admin
       PGDATA: /var/lib/postgresql/data/webapi-golang
     volumes:
       - webapi-golang:/var/lib/postgresql/data
